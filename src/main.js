@@ -4,6 +4,8 @@ import router from './router'
 
 import VueResource from 'vue-resource'
 Vue.use(VueResource)
+//设置接口地址
+Vue.http.options.root = 'http://www.lovegf.cn:8899/'
 
 // css reset  css初始化
 import './styles/common.css'
@@ -18,6 +20,16 @@ import 'mint-ui/lib/style.css'
 
 // 2.安装mint-ui(全局注册所有的组件)
 Vue.use(MintUI)
+
+//定义全局过滤器
+import moment from 'moment'
+Vue.filter('dataFormat',function(dataStr,pattern="YY-MM-DD HH:mm:ss"){
+  return moment(dataStr).format(pattern)
+})
+
+//定义全局评论组件
+import comments from './components/comment.vue'
+Vue.component('comment',comments)
 
 // require('./config') // 表示引入config目录下的 : index.js index.json index.node index
 

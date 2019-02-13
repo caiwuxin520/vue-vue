@@ -6,6 +6,8 @@ import homeComponent from '../pages/home'
 import memberComponent from '../pages/member'
 import shopcarComponent from '../pages/shopcar'
 import searchComponent from '../pages/search'
+import newsListsComponent from '../pages/newsLists'
+import newsInfoComponent from '../pages/newsInfo'
 
 Vue.use(Router)
 
@@ -16,6 +18,8 @@ export default new Router({
     { path: '/member', component: memberComponent },
     { path: '/shopcar', component: shopcarComponent },
     { path: '/search', component: searchComponent },
+    { path: '/home/newsLists', component: newsListsComponent },
+    { path: '/home/newsInfo/:id', component: newsInfoComponent }
     // {
     //   // 当用户访问 / 目录时  会在App.vue的router-view组件的地方显示HelloWorld组件
     //   path: '/',
