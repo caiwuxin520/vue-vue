@@ -31,6 +31,9 @@ Vue.filter('dataFormat',function(dataStr,pattern="YY-MM-DD HH:mm:ss"){
 import comments from './components/comment.vue'
 Vue.component('comment',comments)
 
+//定义缩略图
+import VuePreview from 'vue-pic-preview'
+Vue.use(VuePreview)
 // require('./config') // 表示引入config目录下的 : index.js index.json index.node index
 
 Vue.config.productionTip = false

@@ -8,6 +8,8 @@ import shopcarComponent from '../pages/shopcar'
 import searchComponent from '../pages/search'
 import newsListsComponent from '../pages/newsLists'
 import newsInfoComponent from '../pages/newsInfo'
+import photoListComponent from '../pages/photoList'
+import photoInfoComponent from '../pages/photoInfo'
 
 Vue.use(Router)
 
@@ -19,7 +21,9 @@ export default new Router({
     { path: '/shopcar', component: shopcarComponent },
     { path: '/search', component: searchComponent },
     { path: '/home/newsLists', component: newsListsComponent },
-    { path: '/home/newsInfo/:id', component: newsInfoComponent }
+    { path: '/home/newsInfo/:id', component: newsInfoComponent },
+    { path: '/home/photoList', component: photoListComponent },
+    { path: '/home/photoInfo/:id', component: photoInfoComponent }
     // {
     //   // 当用户访问 / 目录时  会在App.vue的router-view组件的地方显示HelloWorld组件
     //   path: '/',
