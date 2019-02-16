@@ -25,7 +25,7 @@
           </a>
         </router-link>
       </li>
-      <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+      <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3" @click="getGoodslist">
         <a href="#">
           <img src="@/assets/menu3.png" alt>
           <div class="mui-media-body">商品购买</div>
@@ -61,13 +61,17 @@ export default {
     };
   },
   created() {
-    this.getBanner();
+    this.getBanner()
   },
   methods: {
     getBanner() {
       this.$http.get("api/getlunbo").then(result => {
         this.banners = result.body.message;
-      });
+      })
+    },
+    //编程时路由导航
+    getGoodslist(){
+      this.$router.push('/home/goodslist')
     }
   }
 };
