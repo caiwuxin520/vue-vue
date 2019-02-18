@@ -93,6 +93,12 @@ export default {
         },
         addToShopCar(){
             this.ballFlag = ! this.ballFlag
+            this.$store.commit('addToCar',{
+                id:this.id,
+                price:this.gooslist.sell_price,
+                count:this.buyCount,
+                selected:true
+            })
         },
         // 开始执行动画之前所执行的钩子函数
         beforeEnter(el){
